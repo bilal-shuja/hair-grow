@@ -9,24 +9,36 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> -->
+
+      <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <!-- Icon Font Css -->
+  <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
+  <!-- Slick Slider  CSS -->
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="text/javascript">
+
+    // (function(l) {
+    //   if (l.search[1] === '/' ) {
+    //     var decoded = l.search.slice(1).split('&').map(function(s) { 
+    //       return s.replace(/~and~/g, '&')
+    //     }).join('?');
+    //     window.history.replaceState(null, null,
+    //         l.pathname.slice(0, -1) + decoded + l.hash
+    //     );
+    //   }
+    // }(window.location))
+  </script>
+    <title>Hair Grow</title>
   </head>
-  <body>
+  <body id="top">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -39,5 +51,30 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+
+
+        <!-- Main jQuery -->
+        <script src="plugins/jquery/jquery.js"></script>
+        <!-- Bootstrap 4.3.2 -->
+        <script src="plugins/bootstrap/js/popper.js"></script>
+        <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="plugins/counterup/jquery.easing.js"></script>
+        <!-- Slick Slider -->
+        <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+        <!-- Counterup -->
+        <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+        
+        <script src="plugins/shuffle/shuffle.min.js"></script>
+        <script src="plugins/counterup/jquery.counterup.min.js"></script>
+        <!-- Google Map -->
+        <script src="plugins/google-map/map.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
+        
+        <script src="js/script.js"></script>
+        <script src="js/contact.js"></script>
+<!-- 
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> -->
   </body>
 </html>
