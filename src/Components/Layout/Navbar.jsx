@@ -11,15 +11,15 @@ const Navbar = () => {
         <div className="row align-items-center ">
           <div className="col-lg-6">
             <ul className="top-bar-info list-inline-item pl-0 mb-0">
-              <li className="list-inline-item"><a href="mailto:support@gmail.com"><i className="icofont-support-faq mr-2" />support@novena.com</a></li>
-              <li className="list-inline-item"><i className="icofont-location-pin mr-2" />Address Ta-134/A, New York, USA </li>
+              <li className="list-inline-item"><a href="mailto:support@gmail.com"><i className="icofont-support-faq mr-2" />hairrevolutionlahore@gmail.com</a></li>
+              <li className="list-inline-item"><i className="icofont-location-pin mr-2" />Address: Johar Town Lahore</li>
             </ul>
           </div>
           <div className="col-lg-6">
             <div className="text-lg-right top-right-bar mt-2 mt-lg-0">
               <a href="tel:+23-345-67890">
                 <span>Call Now : </span>
-                <span className="h4">823-4565-13456</span>
+                <span className="h4">0320-95903-43</span>
               </a>
             </div>
           </div>
@@ -31,7 +31,8 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navigation" id="navbar" style={{marginTop:"5em"}}>
       <div className="container">
         <a className="navbar-brand" href="/">
-          <img src="images/logo.png" alt className="img-fluid" />
+          <h3 style={{fontSize:"1.7em"}}>Hair Revolution</h3>
+          {/* <img src="images/logo.png" alt className="img-fluid" /> */}
         </a>
         <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
           <span className="icofont-navigation-menu" />
@@ -65,7 +66,7 @@ const Navbar = () => {
                 <li><Link className="dropdown-item text-sm" to="/UnshaveFue">Unshaven FUE</Link></li>
                 <li><Link className="dropdown-item text-sm" to="/CrownHairTransplant">Crown Hair Transplant</Link></li>
                 <li><Link className="dropdown-item text-sm" to="/BeardTransplant">Beard Transplant</Link></li>
-                <li><Link className="dropdown-item text-sm" to="/EyeBrowTranspkant">Eye-Brow Transplant</Link></li>
+                <li><Link className="dropdown-item text-sm" to="/EyeBrowTransplant">Eye-Brow Transplant</Link></li>
                 <li><Link className="dropdown-item text-sm" to="/HairTransplantInWomen">Hair Transplant in Women</Link></li>
                 <li><Link className="dropdown-item text-sm" to="/HairTransplantRepair">Hair Transplant Repair</Link></li>
                 <li><Link className="dropdown-item text-sm" to="/FUTScarRevision">FUT Scar Revision</Link></li>
@@ -81,6 +82,7 @@ const Navbar = () => {
                 <li><a className="dropdown-item" href="blog-single.html">Blog Single</a></li>
               </ul>
             </li> */}
+            <li className="nav-item"><Link className="nav-link" to="/Gallery">Gallery</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/ContactUs">Contact Us</Link></li>
           </ul>
         </div>

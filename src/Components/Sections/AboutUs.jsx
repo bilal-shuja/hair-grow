@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Signature from '../../Images/signature.png';
 
 const AboutUs = () => {
   return (
@@ -21,16 +22,19 @@ const AboutUs = () => {
     <div className="container">
       <div className="row">
         <div className="col-lg-4">
-          <h2 className="title-color">Personal care for your healthy living</h2>
+          <h2 className="title-color">Personal hair care for your healthy hair growth</h2>
         </div>
         <div className="col-lg-8">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, quod laborum alias. Vitae dolorum, officia sit! Saepe ullam facere at, consequatur incidunt, quae esse, quis ut reprehenderit dignissimos, libero delectus.</p>
-          <img src="images/about/sign.png" alt className="img-fluid" />
+          <p>Hair Revolution clinic is place where you trust. Here is the best hair transplant . we are servings our skills in hair transplant about 10 years . our results are 100% . our clients are our priority. our greatest assets is our customer! treat each customer as if they are only one. we are here to serve you better, and  your happiness is our top priority.
+            we used new method of hair transplant, which is fue. here we serve the best treatment and give granted results <span style={{fontSize:"2em"}}><b>&#33;</b> </span>
+        </p>
+          <img src={Signature} alt="Signature" className="img-fluid" />
         </div>
       </div>
     </div>
   </section>
-  <section className="fetaure-page ">
+
+  {/* <section className="fetaure-page ">
     <div className="container">
       <div className="row">
         <div className="col-lg-3 col-md-6">
@@ -63,12 +67,14 @@ const AboutUs = () => {
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
+
+
   <section className="section awards">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-4">
-          <h2 className="title-color">Our Doctors achievements </h2>
+          <h2 className="title-color">Our Achievements </h2>
           <div className="divider mt-4 mb-5 mb-lg-0" />
         </div>
         <div className="col-lg-8">
@@ -108,6 +114,8 @@ const AboutUs = () => {
       </div>
     </div>
   </section>
+
+
   {/* <section className="section team">
     <div className="container">
       <div className="row justify-content-center">

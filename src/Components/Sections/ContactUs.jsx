@@ -1,6 +1,27 @@
-import React from 'react'
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+import emailjs from '@emailjs/browser';
+import React, { useRef } from 'react';
 
-const ContactUs = () => {
+
+toast.configure()
+const ContactUs = (e) => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_qlkqezp', 'template_e4lqsmb', form.current, '0A3nXIPyiFcywAOrF')
+      .then((result) => {
+        toast.info("Message Submit Successfully!");
+          setInterval(() => {
+            window.location.reload(true)
+          }, 2500);
+      }, (error) => {
+        toast.warn("Something went wrong");
+      });
+  };
+
+
   return (
     <>
   <section className="page-title bg-1">
@@ -29,21 +50,21 @@ const ContactUs = () => {
           <div className="contact-block mb-4 mb-lg-0">
             <i className="icofont-live-support" />
             <h5>Call Us</h5>
-            +823-4565-13456
+            0320-95903-43
           </div>
         </div>
         <div className="col-lg-4 col-sm-6 col-md-6">
           <div className="contact-block mb-4 mb-lg-0">
             <i className="icofont-support-faq" />
             <h5>Email Us</h5>
-            contact@mail.com
+            hairrevolutionlahore@gmail.com
           </div>
         </div>
         <div className="col-lg-4 col-sm-6 col-md-6">
           <div className="contact-block mb-4 mb-lg-0">
             <i className="icofont-location-pin" />
             <h5>Location</h5>
-            North Main Street,Brooklyn Australia
+            Johar Town Lahore
           </div>
         </div>
       </div>
@@ -56,21 +77,17 @@ const ContactUs = () => {
           <div className="section-title text-center">
             <h2 className="text-md mb-2">Contact us</h2>
             <div className="divider mx-auto my-4" />
-            <p className="mb-5">Laboriosam exercitationem molestias beatae eos pariatur, similique, excepturi mollitia sit perferendis maiores ratione aliquam?</p>
+            <p className="mb-5">Feel Free to Contact Us</p>
           </div>
         </div>
       </div>
       <div className="row">
         <div className="col-lg-12 col-md-12 col-sm-12">
-          <form id="contact-form" className="contact__form " method="post" action="mail.php">
+          <form id="contact-form" className="contact__form "  ref={form} onSubmit={sendEmail}>
+
             {/* form message */}
-            <div className="row">
-              <div className="col-12">
-                <div className="alert alert-success contact__msg" style={{display: 'none'}} role="alert">
-                  Your message was sent successfully.
-                </div>
-              </div>
-            </div>
+            
+
             <div className="row">
               <div className="col-lg-6">
                 <div className="form-group">

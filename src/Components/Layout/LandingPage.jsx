@@ -1,17 +1,40 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import HairTransImgThree from '../../Images/HairTransImgThree.jpg';
+import HairTransImgOne from '../../Images/HairTransImgOne.jpg';
+import HairTransImgTwo from '../../Images/HTransImgTwo.jpg';
+
+import HairCareThree from '../../Images/HairCareThree.jpg';
 import HairCareOne from '../../Images/HairCareOne.jpg';
 import HairCareTwo from '../../Images/HairCareTwo.jpg';
-import HairCareThree from '../../Images/HairCareThree.jpg';
 
+import GetAppointHair from '../../Images/getAppoitment.jpg';
+
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+import React, { useRef } from 'react';
+import {Link} from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+
+
+toast.configure()
 const LandingPage = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_qlkqezp', 'template_e4lqsmb', form.current, '0A3nXIPyiFcywAOrF')
+      .then((result) => {
+        toast.info("Message Submit Successfully!");
+          setInterval(() => {
+            window.location.reload(true)
+          }, 2500);
+      }, (error) => {
+        toast.warn("Something went wrong");
+      });
+  };
+
   return (
     <>
-    
-
-
-
-
+  
   {/* Hero Section */}
   <section className="banner">
     <div className="container">
@@ -21,7 +44,7 @@ const LandingPage = () => {
             <div className="divider mb-3" />
             <span className="text-uppercase text-sm letter-spacing ">Total Hair care solution</span>
             <h1 className="mb-3 mt-3">Your most trusted hair care partner</h1>
-            <p className="mb-4 pr-5">A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium quisquam aperiam maiores sunt fugit, deserunt rem suscipit placeat.</p>
+            <p className="mb-4 pr-5">Hair Revolution is a well reputed hair transplant organization where you can find best Surgery clinic specializing in single follicular unit.</p>
             <div className="btn-container ">
               <Link to="/ContactUs" target="_blank" className="btn btn-main-2 btn-icon btn-round-full">Make appoinment <i className="icofont-simple-right ml-2  " /></Link>
             </div>
@@ -43,7 +66,7 @@ const LandingPage = () => {
               </div>
               <span>24 Hours Service</span>
               <h4 className="mb-3">Online Appoinment</h4>
-              <p className="mb-4">Get ALl time support for emergency.We have introduced the principle of family medicine.</p>
+              <p className="mb-4">Get All time support for emergency.We have introduced the principle of family medicine.</p>
               <Link to="/ContactUs"  className="btn btn-main btn-round-full">Make a appoinment</Link>
             </div>
             <div className="feature-item mb-5 mb-lg-0">
@@ -53,9 +76,9 @@ const LandingPage = () => {
               <span>Timing schedule</span>
               <h4 className="mb-3">Working Hours</h4>
               <ul className="w-hours list-unstyled">
-                <li className="d-flex justify-content-between">Sun - Wed : <span>8:00 - 17:00</span></li>
-                <li className="d-flex justify-content-between">Thu - Fri : <span>9:00 - 17:00</span></li>
-                <li className="d-flex justify-content-between">Sat - sun : <span>10:00 - 17:00</span></li>
+                <li className="d-flex justify-content-between">Mon - Sat : <span>9:00am - 12:00pm</span></li>
+                <li className="d-flex justify-content-between">Sunday: <span>Off</span></li>
+               
               </ul>
             </div>
             <div className="feature-item mb-5 mb-lg-0">
@@ -63,8 +86,8 @@ const LandingPage = () => {
                 <i className="icofont-support" />
               </div>
               <span>Emegency Cases</span>
-              <h4 className="mb-3">1-800-700-6200</h4>
-              <p>Get ALl time support for emergency.We have introduced the principle of family medicine.Get Conneted with us for any urgency .</p>
+              <h4 className="mb-3">0320-95903-43</h4>
+              <p>Get All time support for emergency.We have introduced the principle of family medicine.Get Conneted with us for any urgency .</p>
             </div>
           </div>
         </div>
@@ -106,79 +129,47 @@ const LandingPage = () => {
       <div className="row justify-content-center">
         <div className="col-lg-7 text-center">
           <div className="section-title">
-            <h2>Award winning patient care</h2>
+            <h2>Hair Care Treatments</h2>
             <div className="divider mx-auto my-4" />
-            <p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
+            {/* <p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p> */}
           </div>
         </div>
       </div>
-      <div className="row">
+      <div className="row gy-2">
         <div className="col-lg-4 col-md-6 col-sm-6">
-          <div className="service-item mb-4">
-            <div className="icon d-flex align-items-center">
-              <i className="icofont-laboratory text-lg" />
-              <h4 className="mt-3 mb-3">Laboratory services</h4>
-            </div>
-            <div className="content">
-              <p className="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+          <div className="service-item">
+            <img className="img-fluid d-block mx-auto" src={HairTransImgOne} alt="" />
+            <div className="content text-center">
+              <h4>Hair Transplant</h4>
+              <p>Surgical</p>
+              <p>Hybrid FUE</p>
+
             </div>
           </div>
         </div>
+
         <div className="col-lg-4 col-md-6 col-sm-6">
-          <div className="service-item mb-4">
-            <div className="icon d-flex align-items-center">
-              <i className="icofont-heart-beat-alt text-lg" />
-              <h4 className="mt-3 mb-3">Heart Disease</h4>
-            </div>
-            <div className="content">
-              <p className="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+          <div className="service-item">
+          <img className="img-fluid d-block mx-auto" src={HairTransImgTwo} alt="" width={200} />
+            <div className="content text-center">
+              <h4>Hair Replacement</h4>
+              <p>Non-Surgical</p>
+              <p>Hair Systems</p>
             </div>
           </div>
         </div>
+        
         <div className="col-lg-4 col-md-6 col-sm-6">
-          <div className="service-item mb-4">
-            <div className="icon d-flex align-items-center">
-              <i className="icofont-tooth text-lg" />
-              <h4 className="mt-3 mb-3">Dental Care</h4>
-            </div>
-            <div className="content">
-              <p className="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+          <div className="service-item">
+          <img className="img-fluid d-block mx-auto" src={HairTransImgThree} alt="" width={200} />
+            <div className="content text-center">
+              <h4>PRP & Lasers</h4>
+              <p>Medical Hair Loss Treatment</p>
+              <p>Laser Hair Loss Treatment</p>
             </div>
           </div>
         </div>
-        <div className="col-lg-4 col-md-6 col-sm-6">
-          <div className="service-item mb-4">
-            <div className="icon d-flex align-items-center">
-              <i className="icofont-crutch text-lg" />
-              <h4 className="mt-3 mb-3">Body Surgery</h4>
-            </div>
-            <div className="content">
-              <p className="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6 col-sm-6">
-          <div className="service-item mb-4">
-            <div className="icon d-flex align-items-center">
-              <i className="icofont-brain-alt text-lg" />
-              <h4 className="mt-3 mb-3">Neurology Sargery</h4>
-            </div>
-            <div className="content">
-              <p className="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6 col-sm-6">
-          <div className="service-item mb-4">
-            <div className="icon d-flex align-items-center">
-              <i className="icofont-dna-alt-1 text-lg" />
-              <h4 className="mt-3 mb-3">Gynecology</h4>
-            </div>
-            <div className="content">
-              <p className="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -189,32 +180,32 @@ const LandingPage = () => {
       <div className="row align-items-center">
         <div className="col-lg-6 ">
           <div className="appoinment-content">
-            <img src="images/about/img-3.jpg" alt className="img-fluid" />
-            <div className="emergency">
-              <h2 className="text-lg"><i className="icofont-phone-circle text-lg" />+23 345 67980</h2>
-            </div>
+            <img src={GetAppointHair} alt="" className="img-fluid " style={{borderRadius:"20px"}}/>
+            {/* <div className="emergency">
+              <h2 className="text-lg"><i className="icofont-phone-circle text-lg" />0320-95903-43</h2>
+            </div> */}
           </div>
         </div>
         <div className="col-lg-6 col-md-10 ">
           <div className="appoinment-wrap mt-5 mt-lg-0">
-            <h2 className="mb-2 title-color">Book appoinment</h2>
-            <p className="mb-4">Mollitia dicta commodi est recusandae iste, natus eum asperiores corrupti qui velit . Iste dolorum atque similique praesentium soluta.</p>
-            <form id="#" className="appoinment-form" method="post" action="#">
+            <h2 className="mb-2 title-color text-center">Book appoinment</h2>
+            <p className="mb-2 text-center">Book an appoinment any time.</p>
+            <form id="#" className="appoinment-form"ref={form} onSubmit={sendEmail}>
               <div className="row">
              
                 <div className="col-lg-6">
                   <div className="form-group">
-                    <input name="date" id="date" type="text" className="form-control" placeholder="dd/mm/yyyy" />
+                  <input name="name" id="name" type="text" className="form-control" placeholder="Your Full Name" />
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="form-group">
-                    <input name="time" id="time" type="text" className="form-control" placeholder="Time" />
+                  <input name="email" id="email" type="email" className="form-control" placeholder="Your Email Address" />
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="form-group">
-                    <input name="name" id="name" type="text" className="form-control" placeholder="Full Name" />
+                  <input name="subject" id="subject" type="text" className="form-control" placeholder="Your Query Topic" />
                   </div>
                 </div>
                 <div className="col-lg-6">
@@ -222,6 +213,7 @@ const LandingPage = () => {
                     <input name="phone" id="phone" type="Number" className="form-control" placeholder="Phone Number" />
                   </div>
                 </div>
+      
               </div>
               <div className="form-group-2 mb-4">
                 <textarea name="message" id="message" className="form-control" rows={6} placeholder="Your Message" defaultValue={""} />

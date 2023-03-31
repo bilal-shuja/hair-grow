@@ -1,7 +1,8 @@
-import { BrowserRouter as Router, Routes, Route   } from "react-router-dom";
+import { BrowserRouter, Router, Routes, Route   } from "react-router-dom";
 import LandingPage from './Components/Layout/LandingPage.jsx';
 import Navbar from './Components/Layout/Navbar.jsx';
 import Footer from './Components/Layout/Footer.jsx';
+import Gallery from './Components/Sections/Gallery.jsx';
 import AboutUs from './Components/Sections/AboutUs.jsx';
 import Services from './Components/Sections/Services.jsx';
 import ContactUs from './Components/Sections/ContactUs.jsx';
@@ -34,15 +35,17 @@ import './App.css';
 function App() {
   return (
     <div>
-      
-
-      <Router>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      {/* <Router >  */}
            <Navbar/>
            <Routes>
            <Route path="/" element={<LandingPage/>}/>
            <Route path="/AboutUs" element={<AboutUs/>}/>
            <Route path="/Services" element={<Services/>}/>
+           <Route path="/Gallery" element={<Gallery/>}/>
+
            <Route path="/ContactUs" element={<ContactUs/>}/>
+
 
            <Route path="/HairTransDiagnose" element={<HairTransDiagnose/>}/>
 
@@ -58,7 +61,7 @@ function App() {
           <Route path="/UnshaveFue"  element={<UnshaveFue/>}/>
           <Route path="/CrownHairTransplant"  element={<CHairTrans/>}/>
           <Route path="/BeardTransplant"  element={<BeardTrans/>}/>
-          <Route path="/EyeBrowTranspkant"  element={<EyeBrowTrans/>}/>
+          <Route path="/EyeBrowTransplant"  element={<EyeBrowTrans/>}/>
           <Route path="/HairTransplantInWomen"  element={<HTransInWomen/>}/>
           <Route path="/HairTransplantRepair"  element={<HTransRepair/>}/>
           <Route path="/FUTScarRevision"  element={<FUTScarRevision/>}/>
@@ -75,7 +78,8 @@ function App() {
            </Routes>
            <Footer/>
            
-           </Router>
+           {/* </Router> */}
+           </BrowserRouter>
     </div>
   );
 }

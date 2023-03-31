@@ -9,14 +9,14 @@ const Footer = () => {
         <div className="col-lg-4 mr-auto col-sm-6">
           <div className="widget mb-5 mb-lg-0">
             <div className="logo mb-4">
-              <h2>Hair Grow</h2>
+              <h2>Hair Revolution</h2>
               {/* <img src="images/logo.png" alt className="img-fluid" /> */}
             </div>
-            <p>Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur veritatis eveniet distinctio possimus.</p>
+            <p>Hair Revolution is a well reputed hair transplant organization where you can find best Surgery clinic specializing in single follicular unit.</p>
             <ul className="list-inline footer-socials mt-4">
-              <li className="list-inline-item"><a href="https://www.facebook.com/themefisher"><i className="icofont-facebook" /></a></li>
-              <li className="list-inline-item"><a href="https://twitter.com/themefisher"><i className="icofont-twitter" /></a></li>
-              <li className="list-inline-item"><a href="https://www.pinterest.com/themefisher/"><i className="icofont-linkedin" /></a></li>
+              <li className="list-inline-item"><a href="https://www.facebook.com/hairtransplantcompany?mibextid=ZbWKwL" target="_blank"><i className="icofont-facebook" /></a></li>
+              <li className="list-inline-item"><a href="https://www.instagram.com/revolution.in.hairs/?igshid=ZDdkNTZiNTM%3D" target="_blank"><i className="icofont-instagram" /></a></li>
+              <li className="list-inline-item" ><a href="https://www.youtube.com/@hairrevolutionlahore" target="_blank"><i className="icofont-youtube" /></a></li>
             </ul>
           </div>
         </div>
@@ -25,11 +25,10 @@ const Footer = () => {
             <h4 className="text-capitalize mb-3">Department</h4>
             <div className="divider mb-4" />
             <ul className="list-unstyled footer-menu lh-35">
-              <li><a href="#">Surgery </a></li>
-              <li><a href="#">Wome's Health</a></li>
-              <li><a href="#">Radiology</a></li>
-              <li><a href="#">Cardioc</a></li>
-              <li><a href="#">Medicine</a></li>
+              <li><a href="#">Hair Transplant Surgical</a></li>
+              <li><a href="#">Non-Surgical</a></li>
+              <li><a href="#">PRP</a></li>
+              <li><a href="#">Lasers Treatment</a></li>
             </ul>
           </div>
         </div>
@@ -53,16 +52,16 @@ const Footer = () => {
             <div className="footer-contact-block mb-4">
               <div className="icon d-flex align-items-center">
                 <i className="icofont-email mr-3" />
-                <span className="h6 mb-0">Support Available for 24/7</span>
+                <span className="h6 mb-0">hairrevolutionlahore@gmail.com</span>
               </div>
-              <h4 className="mt-2"><a href="tel:+23-345-67890">Support@email.com</a></h4>
+              {/* <h4 className="mt-2"><a href=""> </a></h4> */}
             </div>
             <div className="footer-contact-block">
               <div className="icon d-flex align-items-center">
                 <i className="icofont-support mr-3" />
-                <span className="h6 mb-0">Mon to Fri : 08:30 - 18:00</span>
+                <span className="h6 mb-0">Mon to Sat : 09:00-12:00</span>
               </div>
-              <h4 className="mt-2"><a href="tel:+23-345-67890">+23-456-6588</a></h4>
+              <h4 className="mt-2"><a href="tel:03209590343">0320-95903-43</a></h4>
             </div>
           </div>
         </div>
@@ -71,7 +70,7 @@ const Footer = () => {
         <div className="row align-items-center justify-content-between">
           <div className="col-lg-6">
             <div className="copyright">
-              © Copyright Reserved to <span className="text-color">Hair grow</span> by <a href="https://alphanitesofts.com/" target="_blank">AlphaniteSofts pvt ltd</a>
+              © Copyright Reserved to <span className="text-color">Hair Revolution</span> by <a href="https://alphanitesofts.com/" target="_blank">AlphaniteSofts pvt ltd</a>
             </div>
           </div>
           <div className="col-lg-6">
